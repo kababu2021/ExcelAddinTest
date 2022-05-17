@@ -1,0 +1,30 @@
+﻿<Window x:Class="ExcelAddInHCSimple.HcTest"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+        xmlns:hc="https://handyorg.github.io/handycontrol"
+        xmlns:local="clr-namespace:ExcelAddInHCSimple"
+        mc:Ignorable="d" 
+        d:DesignHeight="500" d:DesignWidth="800"
+        d:DataContext="{d:DesignInstance local:HcTest}"
+        Title="HandyControl Test" MinHeight="500" MinWidth="800" SizeToContent="WidthAndHeight">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <hc:Theme Name="HandyTheme" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <!-- 
+        <StackPanel>
+            <hc:CheckComboBox x:Name="cbUserSelector" ItemsSource="{Binding Path=UsersList, UpdateSourceTrigger=PropertyChanged}" DisplayMemberPath="Name" SelectedValuePath="Id"  VerticalAlignment="Center" Style="{StaticResource CheckComboBoxPlus}" hc:InfoElement.Title="Users" MinWidth="150" MaxWidth="300" Width="Auto" ShowSelectAllButton="True" ShowClearButton="True" MaxDropDownHeight="200" Margin="0,16,0,0" SelectionChanged="cbUserSelectorSelectionChanged" />
+            <hc:CheckComboBox Name="cbUsers" ShowClearButton="True" MaxWidth="380" ItemsSource="{Binding UsersString}" ShowSelectAllButton="True"/>
+        </StackPanel>
+        <StackPanel Margin="32" Orientation="Vertical">
+        </StackPanel>
+        -->
+        <hc:CheckComboBox Name="chkcbUsers" ShowClearButton="True" MaxWidth="380" Style="{StaticResource CheckComboBoxExtend}" hc:InfoElement.Title="Users" Margin="0,32,0,0" ShowSelectAllButton="True" SelectionChanged="cbUserSelector_SelectionChanged" DisplayMemberPath="Name" SelectedValuePath="Id"/>
+    </Grid>
+</Window>
